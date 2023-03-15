@@ -1,12 +1,12 @@
-const sequelize = require("sequelize")
 const Sequelize = require("sequelize")
+
  sequelize = new Sequelize ("test", "root","",{
     host: "localhost",
     dialect: "mysql"
 })
 
 sequelize.authenticate().then(function(){
-    console.log("conectado com sucesso!")
+    console.log("Banco de dados conectado com sucesso!")
 }).catch(function(erro){
     console.log("falha ao conectar: "+erro)
 })
@@ -41,7 +41,7 @@ Agendamentos.create({
     nome:"Jeferson Roberto de Lima",
     endereco: "Av Aguia de Haia",
     bairro:"JD São nicolau",
-    cep:88922410,
+    cep: 08382120,
     estado:"São Paulo",
     observacao:"nenhuma"
 

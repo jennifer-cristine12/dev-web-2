@@ -1,7 +1,10 @@
-var http = require ('http')
+const express = require (express)
+const app = express
 
-http.createServer(function(req, res){
-    res.end("mensagem direcionada")
-}).listen(8081)
+    app.get("/", function(req,res){
+        res.send("Pagina Principal")
+    })
 
-console.log("servidor está ativo!")
+    app.listen(8081, function(){
+        console.log("Servidor ativo")
+    })
